@@ -1,0 +1,38 @@
+body {
+    background: rgb(0, 0, 23);
+    font: normal 15pt Montserrat;
+    color: white
+}
+
+section {
+    background: white;
+    color: black;
+    font: normal 12pt Montserrat;
+    border-radius: 15px;
+    width: 500px;
+    margin: auto;
+}
+
+div {
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+input {
+    border-color: aliceblue;
+    border-radius: 10px;
+    padding: 5px;
+    width: 80%;
+}
+
+.button {
+    background-color: rgb(0, 0, 23);
+    color: white;
+    font: bold 18pt Montserrat;
+    padding: 10px 25px 10px 25px;
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.242);
+    cursor: pointer;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua nacionalidade</title>
+    <style>
+        body {
+            background: rgb(38, 38, 38);
+            font: normal 16pt Montserrat;
+        }
+        h1 {
+            color: greenyellow;
+        }
+        p {
+            font-size: 12pt;
+            color: white;
+        }
+        #txtpais {
+            background: none;
+            border: solid 1px;
+            border-color: white;
+            border-radius: 20px;
+            padding: 10px;
+            color: white;
+        }
+        #btn {
+            background: greenyellow;
+            font: bold 12pt Montserrat;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            color: green;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Estrangeiro ou Brasileiro?</h1>
+    <p>Digite o nome do seu país de origem:</p>
+    <input type="text" name="txtpais" id="txtpais">
+    <input type="button" id="btn" value="Verificar" onclick="conferir()">
+    <div id="res"></div>
+
+    <script>
+        function conferir() {
+            var pais = window.document.getElementById('txtpais')
+            var res = window.document.querySelector('div#res')
+            var nac = (txtpais.value)
+
+            res.innerHTML = `<p>Seu país é ${nac}.</p>`
+            
+                if (nac == 'Brasil') {
+                res.innerHTML += '<p>Você é <strong>BRASILEIRO</strong>.</p>'
+            } else {
+                res.innerHTML += '<p>Você é <strong>ESTRANGEIRO</strong>.</p>'
+            }
+        }
+
+    </script>
+</body>
+</html>

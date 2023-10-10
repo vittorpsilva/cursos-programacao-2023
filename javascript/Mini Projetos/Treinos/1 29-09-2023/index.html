@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gerador de Números Aleatórios</title>
+</head>
+<body>
+    <h1>Gerador de Números Mega-Sena</h1>
+    <button onclick="gerarNumeros()">Gerar Números</button>
+    <p id="numeros"></p>
+
+    <script>
+        function gerarNumeros() {
+            var numeros = [];
+            
+            // Gerar 6 números aleatórios de 1 a 60
+            while (numeros.length < 6) {
+                var numero = Math.floor(Math.random() * 61);
+                if (numeros.indexOf(numero) === -1) {
+                    numeros.push(numero);
+                }
+            }
+            
+            // Ordenar os números em ordem crescente (opcional)
+            numeros.sort(function(a, b) {
+                return a - b;
+            });
+            
+            // Exibir os números na página
+            var numerosDiv = document.getElementById("numeros");
+            numerosDiv.innerHTML = "Números selecionados:<br> " + numeros.join("<br>");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa JS</title>
+    <style>
+        body {
+            background-color: rgb(242, 242, 242);
+            color: rgb(69, 69, 69);
+            font: normal 18pt Montserrat;
+        }
+        h1 {
+            color: rgb(76, 57, 105);
+        }
+        p {
+            color: rgb(165, 165, 165);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <p>Já me livrei da maldição.</p>
+    <script>
+        var n1 = Number(window.prompt('Digite um número'))
+        var n2 = Number(window.prompt('Digite outro número'))
+        var s = n1 + n2
+        window.alert(`A soma entre ${n1} + ${n2} é igual a ${s}`)
+        // Concatenação é adicionar informação de uma variável em um tipo de dado (string, number etc) // + para adição e também para concatenação
+       // prompt retorno string, se não converter o número para o tipo number, o sinal de + não vai somar, vai só juntar as strings
+       // a conversão é feita com Number.parseInt(n) ou Number.parteFloat(n) 
+       // Nas novas versões do JS, é possível usar também o comando Number(n), o sistema se vira pra saber se é número inteiro ou real
+       // conversão de number para string é feito com String(n) ou com n.toString()
+       // TemplateString é uma maneira de usar várias variáveis em sequência em uma string mas de maneira mais organizada do que a concatenção e é feito assim `${}`
+       // $ é chamado de placeholder
+       // 'Eu estou aprendendo s' - não faz interpolação
+       // 'Eu estou aprendendo' + s - usa concatenção (s é uma var nesse caso)
+       // `Eu estou aprendendo ${s}` - usa template string
+    </script>
+</body>
+</html>
